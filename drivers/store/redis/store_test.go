@@ -7,9 +7,9 @@ import (
 	libredis "github.com/go-redis/redis"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ulule/limiter"
-	"github.com/ulule/limiter/drivers/store/common"
-	"github.com/ulule/limiter/drivers/store/redis"
+	"github.com/nbarbey/limiter"
+	"github.com/nbarbey/limiter/drivers/store/common"
+	"github.com/nbarbey/limiter/drivers/store/redis"
 )
 
 func TestRedisStoreSequentialAccess(t *testing.T) {

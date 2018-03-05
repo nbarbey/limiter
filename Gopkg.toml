@@ -1,4 +1,4 @@
-# Gopkg.toml for github.com/ulule/limiter
+# Gopkg.toml for github.com/nbarbey/limiter
 
 [[constraint]]
   name = "github.com/pkg/errors"
