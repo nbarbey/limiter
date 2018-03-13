@@ -46,6 +46,7 @@ func (middleware *Middleware) Handle(c *gin.Context) {
 	c.Set("RateLimit-Limit", context.Limit)
 	c.Set("RateLimit-Remaining", context.Remaining)
 	c.Set("RateLimit-Reset", context.Reset)
+	c.Set("RateLimit-Reached", context.Reached)
 
 	c.Header("X-RateLimit-Limit", strconv.FormatInt(context.Limit, 10))
 	c.Header("X-RateLimit-Remaining", strconv.FormatInt(context.Remaining, 10))
