@@ -40,7 +40,6 @@ func (middleware *Middleware) Handle(c *gin.Context) {
 	context, err := middleware.Limiter.Get(c, key)
 	if err != nil {
 		middleware.OnError(c, err)
-		c.Abort()
 		return
 	}
 
@@ -54,7 +53,6 @@ func (middleware *Middleware) Handle(c *gin.Context) {
 
 	if context.Reached {
 		middleware.OnLimitReached(c)
-		c.Abort()
 		return
 	}
 
